@@ -1,50 +1,66 @@
+
+import Link from 'next/link';
+
 export default function HomePage() {
   return (
     <main>
-      {/* Other sections like Hero, About Us, etc. */}
+      {/* HERO SECTION */}
+      <section className="bg-white py-16 px-6 border-b border-gray-200 text-center">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#00205B] mb-6">
+            Security quotes on alarms, reaction, and guarding — quick and easy.
+          </h1>
+          <p className="text-xl text-[#00205B]">
+            From spaza shops to smart homes — in under 2 minutes, we’ll show you the average armed response cost is R450/month.
+          </p>
+        </div>
+      </section>
 
-      {/* 🔽 CONTACT US SECTION */}
+      {/* BUTTON SECTION */}
+      <section className="py-12 px-6 bg-[#F8F9FA] text-center">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/alarm"><button className="bg-[#84BD00] text-white py-3 px-4 rounded font-bold w-full">Alarm Systems</button></Link>
+            <Link href="/armed-response"><button className="bg-[#84BD00] text-white py-3 px-4 rounded font-bold w-full">Armed Response</button></Link>
+            <Link href="/guarding"><button className="bg-[#84BD00] text-white py-3 px-4 rounded font-bold w-full">Guarding</button></Link>
+            <Link href="/cctv"><button className="bg-[#84BD00] text-white py-3 px-4 rounded font-bold w-full">CCTV</button></Link>
+            <Link href="/offsite-monitoring"><button className="bg-[#84BD00] text-white py-3 px-4 rounded font-bold w-full">Offsite CCTV Monitoring</button></Link>
+            <Link href="/training-centre"><button className="bg-[#84BD00] text-white py-3 px-4 rounded font-bold w-full">PSIRA Training</button></Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT SECTION */}
+      <section id="about" className="py-16 px-6 bg-white border-t border-gray-200">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-[#00205B] mb-6">About Us</h2>
+          <p className="text-lg text-[#00205B] mb-4">
+            <span className="text-[#84BD00] font-bold">SecurSA</span> is South Africa’s first security marketplace...
+          </p>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
       <section id="contact" className="bg-white py-16 px-6 border-t border-gray-200">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#00205B] text-center mb-8">
-            Contact Us
-          </h2>
-
+          <h2 className="text-3xl font-bold text-[#00205B] text-center mb-8">Contact Us</h2>
           <p className="text-center text-[#00205B] mb-12">
             No call centres. No fuss. Just reach out via email, WhatsApp, or the form below — and Surelock will take it from there.
           </p>
-
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-bold text-[#00205B] mb-2 flex items-center">
-                  <svg className="w-6 h-6 text-[#84BD00] mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v9a2 2 0 002 2z" />
-                  </svg>
-                  Email Us
-                </h3>
-                <p className="text-[#00205B]"><strong>Support:</strong> support@secursa.co.za</p>
-                <p className="text-[#00205B]"><strong>Training:</strong> training@secursa.co.za</p>
-                <p className="text-[#00205B]"><strong>Providers:</strong> partners@secursa.co.za</p>
+                <h3 className="text-xl font-bold text-[#00205B] mb-2">📧 Email Us</h3>
+                <p><strong>Support:</strong> support@secursa.co.za</p>
+                <p><strong>Training:</strong> training@secursa.co.za</p>
+                <p><strong>Providers:</strong> partners@secursa.co.za</p>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[#00205B] mb-2 flex items-center">
-                  <svg className="w-6 h-6 text-[#84BD00] mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5h2l3 7v5h8v-5l3-7h2" />
-                  </svg>
-                  WhatsApp Support
-                </h3>
-                <a href="https://wa.me/27872505300" target="_blank" rel="noopener noreferrer" className="text-[#84BD00] underline font-semibold">
-                  Click here to message us on WhatsApp
-                </a>
+                <h3 className="text-xl font-bold text-[#00205B] mb-2">💬 WhatsApp Support</h3>
+                <a href="https://wa.me/27872505300" className="text-[#84BD00] underline font-semibold">Message us on WhatsApp</a>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[#00205B] mb-2 flex items-center">
-                  <svg className="w-6 h-6 text-[#84BD00] mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Ask Surelock
-                </h3>
+                <h3 className="text-xl font-bold text-[#00205B] mb-2">🔐 Ask Surelock</h3>
                 <p className="text-[#00205B]">Click the “Ask Surelock” button on the homepage — she’ll guide you in under 2 minutes.</p>
               </div>
             </div>
